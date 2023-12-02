@@ -1,12 +1,22 @@
+import { mapValidationFunctions } from '../script/utils';
+
 export default function submit() {
   const submitButton = document.querySelector('#submit');
-  const inputs = document.querySelectorAll('input');
+  const form = document.querySelector('form');
 
   submitButton.addEventListener('click', (e) => {
-    const allSuccess = Array.from(inputs).every((input) => input.classList.contains('success'));
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    let allSuccess = true;
+    formData.forEach((value, key) => {
+      if (!mapValidationFunctions[key].verify(value)) {
+        allSuccess = false;
+      }
+    });
+
     if (allSuccess) {
       submitButton.classList.add('success-button');
     }
-    e.preventDefault();
   });
 }
