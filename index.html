@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="title">
+        <h1>Validating Web Forms</h1>
+      </div>
+
+      <form class="fields">
+        <label for="firstname">First Name</label>
+        <input
+          type="text"
+          placeholder="First name"
+          id="firstname"
+          name="firstname"
+        />
+        <p class="error"></p>
+
+        <label for="lastname">Last Name</label>
+        <input
+          type="text"
+          placeholder="Last name"
+          id="lastname"
+          name="lastname"
+        />
+        <p class="error"></p>
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="email" name="email" />
+        <p class="error"></p>
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          name="password"
+        />
+        <p class="error"></p>
+
+        <label for="telephone">Telephone</label>
+        <input
+          type="number"
+          placeholder="Telephone"
+          id="telephone"
+          name="telephone"
+        />
+        <p class="error"></p>
+
+        <label for="bio">Your bio</label>
+        <input type="text" placeholder="Bio" id="bio" name="bio" />
+        <p class="error"></p>
+
+        <button type="submit" name="submit" id="submit" class="submit">Submit</button>
+        <p class="error"></p>
+      </form>
+    </header>
+
+    <script type="module" src="./script/main.js"></script>
+  </body>
+</html>

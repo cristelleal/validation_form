@@ -1,0 +1,116 @@
+@import url('variables.css');
+
+/*--------------------------------------------------------------
+   - FOUNDATION
+--------------------------------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: var(--color-n-0100);
+  color: var(--color-n-000);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  color: var(--color-n-0100);
+  font-family: var(--typography-typeface);
+}
+
+/*--------------------------------------------------------------
+   - COMPONENTS
+--------------------------------------------------------------*/
+
+h1 {
+  text-align: center;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 2% 35% 2% 35%;
+}
+
+input {
+  outline: none;
+  margin: 2% 0 2% 0;
+  padding: var(--padding-regular-button);
+  border: 1px solid var(--color-n-0250);
+  border-radius: 5px;
+  color: var(--color-n-0200);
+  text-align: left;
+  font-weight: normal;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--color-n-0150);
+  color: var(--color-n-0200);
+  text-align: left;
+  font-weight: normal;
+}
+
+button {
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+button:focus {
+  outline: none;
+  border: 0;
+}
+
+label {
+  margin-top: 0.5%;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.submit {
+  cursor: pointer;
+  width: 10rem;
+  padding: var(--padding-regular-button);
+  background-color: var(--color-n-0100);
+  color: var(--color-n-000);
+  border: 0;
+}
+
+.submit:hover {
+  background-color: var(--color-n-0100-B);
+}
+
+.error {
+  text-align: center;
+  color: var(--color-n-050);
+  font-weight: bold;
+  font-size: small;
+  margin: 0 0 2% 0;
+}
+
+.fail {
+  border: 1px solid var(--color-n-0150);
+}
+
+.success {
+  border: 2px solid var(--color-n-055)
+}
+
+.success-button {
+  background-color: var(--color-n-055);
+  border: 0;
+}
+
+.success-button:hover {
+  background-color: var(--color-n-055-B);
+}
